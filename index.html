@@ -1,32 +1,37 @@
 <!DOCTYPE html>
-<html lang="es-mx">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
     <title>Encriptador de Texto</title>
-    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header class="header">
-        <img src="assets/Logo.png" alt="Logo de Alura">
+    <header>
+        <img class="logo" src="/assets/Logo.png" alt="Logo de Alura Latam">
     </header>
     <main>
-        <div class = "container"> 
-            <div class = "text-area">
-                <textarea placeholder="Ingrese el texto aquí"></textarea>
-                <div class = icon-text>
-                    <div class="bi--exclamation-circle-fill"></div>
-                    <span>Solo letras minúsculas y sin acentos</span>
-                </div>
-                <div class="buttons">
-                    <button class = "encrypt">Encriptar</button>
-                    <button class = "decrypt">Desencriptar</button>
-                </div>
+        <section>
+            <textarea class = "text-area" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <div>
+                <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
             </div>
-        </div>
+            <div class="botones">
+                <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+            </div>
+        </section>
+        <section>
+            <textarea class="mensaje" cols="20" rows="10"></textarea>
+            <div>
+                <button class="btn-copiar" onclick = "btnCopiar()">Copiar</button>
+            </div>
+        </section>
     </main>
-    <footer class="footer">
-        <p>Desarrollado por Mateo Dávila</p>
-    </footer>
+<script src="/app.js"></script>  
 </body>
 </html>
